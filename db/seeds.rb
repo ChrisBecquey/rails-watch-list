@@ -8,7 +8,7 @@
 
 puts 'Cleaning database ...'
 Movie.destroy_all
-
+List.destroy_all
 puts 'Creating some movies'
 
 Movie.create(title: "Wonder Woman 1984", overview: "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s", poster_url: "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg", rating: 6.9)
@@ -16,5 +16,12 @@ Movie.create(title: "The Shawshank Redemption", overview: "Framed in the 1940s f
 Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.", poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", rating: 7.9)
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
+puts 'Creating some lists'
+
+List.create(name: "Horror", image_url: "https://images.unsplash.com/photo-1613679074971-91fc27180061?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80")
+List.create(name: "Science-fiction", image_url: "https://images.unsplash.com/photo-1623476408624-721c9185d569?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80")
+List.create(name: "Action", image_url: "https://images.unsplash.com/photo-1518719389402-b6beb27e88c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80")
+
+puts "#{List.count} lists creates"
 puts "#{Movie.count} movies creates"
 puts 'Finish'
